@@ -195,32 +195,6 @@ gserver-rs/
 └── run_server.sh           # Server startup script
 ```
 
-## Connecting with a Client
-
-### GraalClient
-
-1. Open GraalClient
-2. Click "Add Server"
-3. Enter:
-   - **Server IP:** `127.0.0.1` (or your server's public IP)
-   - **Server Port:** `14902` (or your configured port)
-4. Click "Connect"
-5. Login with your account name
-
-### RC (Remote Control)
-
-For administrative access, use an RC client or connect with:
-```
-Server: 127.0.0.1
-Port: 14902
-Account: your_admin_account
-```
-
-Ensure your account has admin rights set in `accounts/yourname.txt`:
-```
-LOCALRIGHTS=16777215
-```
-
 ## Development
 
 ### Running Tests
