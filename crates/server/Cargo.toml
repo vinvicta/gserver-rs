@@ -1,0 +1,17 @@
+[package]
+name = "gserver-server"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "gserver"
+path = "src/main.rs"
+
+[dependencies]
+gserver-core.workspace = true
+gserver-network.workspace = true
+gserver-protocol.workspace = true
+gserver-config.workspace = true
+tokio.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true

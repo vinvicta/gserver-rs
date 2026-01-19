@@ -1,0 +1,11 @@
+[package]
+name = "gserver-accounts"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+gserver-core = { path = "../core" }
+gserver-config = { path = "../config" }
+tracing = "0.1"
+thiserror = "2.0"
+serde = { version = "1.0", features = ["derive"] }

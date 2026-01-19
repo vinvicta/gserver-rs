@@ -1,0 +1,44 @@
+# Rust
+/target/
+**/*.rs.bk
+*.pdb
+Cargo.lock
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Build
+*.o
+*.so
+*.dylib
+*.dll
+*.exe
+
+# Testing
+*.profraw
+*.profdata
+
+# Server specific - keep everything in servers/ for server startup
+# All server files are committed except runtime logs
+servers/*/logs/*.log
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+*.cache
+
+# Claude Code
+.claude/
+
+# Development files that shouldn't be in repo
+*.zip
+CONFIG_PARITY.md
+CPP_REVIEW.md
+GAP_ANALYSIS.md
+gserver.txt

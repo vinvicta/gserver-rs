@@ -1,0 +1,488 @@
+# Sets the location where new players start on the server.
+# By default, the server uses the values inside the defaultaccount.
+# These values will override defaultaccount.
+#startlevel = onlinestartlocal.nw
+#startx = 30
+#starty = 30.5
+
+# Specifies where players go when they say "unstick me".
+unstickmelevel = onlinestartlocal.nw
+unstickmex = 30
+unstickmey = 30.5
+unstickmetime = 30
+
+# List of weapon names (comma separated) that will be given to the player each time they connect.
+protectedweapons = 
+
+# Players in these levels can`t warp out nor can they PM other players.
+jaillevels = police2.graal,police4.graal
+
+# Enable/disable explosions.
+noexplosions = false
+
+# Enable/disable the ability of the player to change their look.
+setbodyallowed = true
+setheadallowed = true
+setshieldallowed = true
+setswordallowed = true
+setcolorsallowed = true
+
+# Disables the showadmins chat command.
+disableshowadmins = false
+
+# Defines the amount of Gralats a player drops when they die.
+mindeathgralats = 1
+maxdeathgralats = 50
+
+# If set to false, only players with the Change Staff Accounts right can alter gralats.
+normaladminscanchangegralats = true
+
+# These guilds appear in the "Staff" section of the player list.
+staffguilds = Server,Manager,Owner,Admin,FAQ,LAT,NAT,GAT,GP,GP Chief,Bugs Admin,NPC Admin,Gani Team,GFX Admin,Events Team,Events Admin,Guild Admin
+
+# Accounts which are recognized by the server as staff.  To be allowed access to RC, your account must be here.
+# (Manager) and the like are just placeholders to organize the list.  They are not guilds.
+staff = (Manager),YOURACCOUNT
+
+# Enables/disables item dropping from various sources.
+# bushitems also affects certain tiles other than bushes.
+# If making a 1.41 server, set bushitems, vasesdrop, and baddyitems to false as the 1.41 client generates items.
+bushitems = true
+vasesdrop = true
+baddyitems = false
+
+# The type of items that are dropped by bushes or death.
+# Allowed bush items: greenrupee, bluerupee, bombs, heart.  GR extension: redrupee, goldrupee, darts.
+# Allowed death items: greenrupee, bluerupee, redrupee, goldrupee, bombs, darts.
+# bushitemtypes = greenrupee,bluerupee,heart,bombs
+# deathitemtypes = greenrupee,bluerupee,redrupee,goldrupee,bombs,darts
+
+# Value from 0-100 that determines the percent chance the item will drop from bushes.
+# Will check in order of the bushitemtypes list, so if the sum adds up to over 100, it will eventually stop early.
+# spawnrategreenrupee = 10
+# spawnratebluerupee = 5
+# spawnrateheart = 5
+# spawnratebombs = 5
+
+# If enabled, it will allow negative power swords which will heal players when used.
+healswords = false
+
+# Timeout in seconds for respawning objects.
+# respawntime affects tile changes.
+respawntime = 15
+horselifetime = 30
+baddyrespawntime = 60
+
+# Controls who can use the warpto command.
+#   warptoforall - Lets everybody, including players, use warpto.
+warptoforall = false
+
+# Alters the possible status options in the player list.
+playerlisticons = Online,Away,DND,Eating,Hiding,No PMs,RPing,Sparring,PKing
+
+# Selects what is displayed in the player`s profile.
+# Name:=variable, where variable can also be a flag on the player`s account.
+profilevars = Kills:=playerkills,Deaths:=playerdeaths,Maxpower:=playerfullhearts,Rating:=playerrating,Alignment:=playerap,Gralat:=playerrupees,Swordpower:=playerswordpower,Spin Attack:=canspin
+
+# Global guild settings.
+# If globalguilds is true, global guilds are allowed.  If false, allowedglobalguilds specifies which guilds are allowed.
+globalguilds = true
+allowedglobalguilds = 
+
+# AP system settings.
+# If apsystem is set to true, it activates some restrictions regarding hearts for low AP players.
+# For the aptime# options, the values are the time in seconds it takes to recharge one point of AP for the given range.
+#   aptime4 is used for AP values between 80 and 100.  aptime 3 for 60 through 80.  And so on until 0 is between 0 and 20.
+apsystem = true
+aptime0 = 30
+aptime1 = 90
+aptime2 = 300
+aptime3 = 600
+aptime4 = 1200
+
+# Defines limits to hearts, swords, and shields.
+heartlimit = 3
+swordlimit = 3
+shieldlimit = 3
+
+# Determines if the Z value is ignored or not for serverside touch events (by default touches require Z < 3).
+playertouchsmenoz = false
+
+# Disables the player z-axis.  Locks player.z to undefined.  Z values outside of |-50, 170| is undefined.
+lockplayerz = false
+
+# If true, disable the ability.
+dontchangekills = false
+
+# Disables the updating of the sparring deviation value.
+dontupdateratingd = false
+
+# Flag options.
+# If dontaddserverflags is true, any server. flag changes sent by the client are rejected.
+dontaddserverflags = false
+
+# If true, idle players are removed after maxnomovement seconds.
+disconnectifnotmoved = true
+maxnomovement = 1200
+
+# If false, it will prevent the player from obtaining items like bomb, bow, superbomb, etc.
+defaultweapons = true
+
+# Enables or disables the putnpc script command.
+putnpcenabled = true
+
+# Enables or disables puthorse.
+puthorseenabled = true
+
+# Allows player triggeractions to be sent to other players.
+sendplayertriggers = true
+
+# Disables player item dropping.
+disableitemdropping = false
+
+# If true, each time an item is dropped, it will be blocked.
+# Instead, the Control-NPC will receive an onItemDrop(level,x,y,itemname) action.
+# For GS1, it will be `if (itemdrop)` with #p(0)-#p(3) as the arguments.
+itemdropevents = false
+
+# Says if onItemDrop should only be used for gralats, but otherwise spawn classic items.
+itemdropeventsonlyforgralats = false
+
+# Enables serverside onwall detection for shoot projectiles.
+projectilesstoponwall = true
+
+# List of bigmap.txt type maps used by the server.  It lets the server know the level layout
+# so you can see players move and talk in adjacent levels.
+maps = 
+
+# List of gmaps to be used by the server.
+gmaps = 
+
+# Sets the bigmap and minimap to use.
+# Setting bigmap will break gmaps.
+# bigmap = maptext,mapimage,defaultx,defaulty
+# minimap = maptext,mapimage,defaultx,defaulty
+#   maptext is the bigmap.txt styled file with the levels.
+#   mapimage is the image to use
+#   defaultx and defaulty is the position where the heads of players not on the map will be drawn.
+bigmap = 
+minimap = 
+
+# Radius, in tiles, in which players receive updates.
+# By default it only works on gmaps, but syncbydistanceinside can allow in non-gmap levels.
+# NOTE: Not fully implemented yet.  To avoid weird problems, don`t use distances less than 64.
+# syncdistancex = 192
+# syncdistancey = 192
+# syncbydistanceinside = false
+
+# Controls if the NPC-Server processes scripts when there are no players.
+# sleepwhennoplayers = true
+
+# Lets NPC-Server scripts permanently alter levels.
+# savelevels = false
+
+# If true, and savelevels is true, then updateboard2 commands are automatically saved to the level file.
+# levelsautosave = true
+
+# --------------------------------------------------------------------------------------
+# --- Public Graal Reborn non-standard extensions.                                   ---
+# --------------------------------------------------------------------------------------
+
+# If true, moved push/pull blocks aren`t sent to other players.
+clientsidepushpull = true
+
+# List of group instanced maps used by the server.
+# Use full filenames, even for gmaps.
+# NOTE: Temporarily disabled.
+# groupmaps = 
+
+# The head used by RCs on the server.
+staffhead = head25.png
+
+# If cropflags is true, any client and server flags will be cropped to 223 characters.
+#    The flag name and equal sign are INCLUSIVE!
+#    It is recommended to not turn this off unless you know the repercussions of doing so.
+cropflags = true
+
+# The distance that an NPC listens for serverside events, in tiles.
+# The client has a hardcoded distance of 10 tiles for trigger events.
+# eventdistance = 64
+# triggerdistance = 10
+
+# If true, serverside scripted log commands will use the classic format.
+classicstylelogs = false
+
+# --------------------------------------------------------------------------------------
+# --- Private server options.  The changestaffacct right is required to alter these. ---
+# --------------------------------------------------------------------------------------
+
+# The server details seen from the server list.
+name = My Server
+description = My Server
+url = http://www.graal.in/
+
+# Sets the server generation.
+# The server version controls certain aspects of the server, like how data is sent and saved.
+# This option will restrict which clients can join the server, taking precedence over allowedversions.txt.
+# GS2 is only usable on newmain and modern.
+#   original - 1.x
+#   classic  - 2.x/3.x
+#   newmain  - 4.x to 5.007
+#   modern   - 5.1+
+generation = classic
+
+# The NPC-Server nickname.
+nickname = NPC-Server
+
+# The information of the computer hosting the gserver.  This gets sent to people wanting to connect.
+# If myip is set to AUTO, it uses the IP address exposed to the list server.
+serverip = AUTO
+serverport = 14802
+serverinterface = AUTO
+
+# The local IP address of the computer.  Helps you connect to your server if your router can`t route on
+# its WAN-side IP address.  Leave it as AUTO unless you know what you are doing.
+# If you have a Linux server, you will want to change this, though.
+localip = AUTO
+upnp = true
+
+# Specifies the location of the list server.
+# DON`T CHANGE IF YOU DON`T KNOW WHAT YOU ARE DOING.
+listip = listserver.graal.in
+listport = 14900
+
+# Maximum number of players allowed on the server.
+maxplayers = 128
+
+# Enables/disables staff only.  If true, only accounts in the staff option are allowed on.
+onlystaff = false
+
+# Set to true to disable the folder configuration.
+nofoldersconfig = false
+
+# Determines whether the server handles certain things like signs and links.
+serverside = false
+
+# If folders config is disabled, put additional search directories besides "world" here.
+# Comma delimited array.
+sharefolder = 
+
+# Sets the language.  Currently not implemented.
+language = English
+
+# If true, DB NPCs can`t be deleted via `destroy`.  Does not affect putnpc2 NPCs.
+# protectdbnpcs = true
+
+# --------------------------------------------------------------------------------------
+# --- Private Graal Reborn non-standard extensions.                                  ---
+# --------------------------------------------------------------------------------------
+
+# If true, level signs are sent to players (only takes effect if serverside is true).
+clientsidesigns = false
+
+# If true, level links are sent to players (only takes effect if serverside is true).
+clientsidelinks = false
+
+# If true, emulates joins on clientside code.
+# When true, the server looks for a .txt file with the same name as the join.
+# Does not function when serverside is true.
+clientsidejoins = false
+
+# Enables triggeraction hacks.
+triggerhack_weapons = false		# gr.addweapon, gr.deleteweapon
+triggerhack_guilds = false		# gr.addguildmember, gr.removeguildmember, gr.removeguild, gr.setguild
+triggerhack_groups = false		# gr.setgroup, gr.setlevelgroup
+triggerhack_files = false		# gr.appendfile, gr.writefile
+triggerhack_rc = false			# gr.rcchat
+triggerhack_execscript = false	# gr.es_clear, gr.es_set, gr.es_append, gr.es
+triggerhack_props = false		# gr.attr1-gr.attr30
+triggerhack_levels = false		# gr.updatelevel
+
+# Enables flag hacks.
+flaghack_movement = true		# -gr_movement weapon.
+flaghack_ip = false				# gr.ip
+
+# If true, the server will process all script events, even if the NPC doesn`t check for the event flag.
+runallscriptevents = false
+
+# Scripting
+gs2default = false
+
+# --------------------------------------------------------------------------------------
+# --- Not implemented options.                                                       ---
+# --------------------------------------------------------------------------------------
+
+# Controls who can use the warpto command.
+#   warptoforlowadmins - Allows Global Admin Level 1 to warp (not implemented).
+#   warpto - Enables or disables warpto for all staff, including globals (not implemented).
+#   ignorewarpto - If true, "warpto" chat text is ignored and not processed (not implemented).
+# warptoforlowadmins = true
+# warpto = true
+# ignorewarpto = false
+
+# Controls ghost mode (not implemented).
+# ghostmodeenabled = false
+# ghostmodefornotstaff = false
+
+# Selects whether to disable adding of Bombs, Arrows, and Explosions for Trial accounts.
+# limitfreeplayers2 = false
+
+# How much AP new accounts are given (just update the defaultaccount).
+# startap = 50
+
+# Loads translations into the server for server-side translations.
+# translatedlanguages = en,dn
+
+# The default language of the server.
+# defaultlanguage = en
+
+# Controls if levels use the new tileset layout server-side, or a match list of levels that will.
+# newtilesets = false
+# newtilesetlevels = 
+
+# The order in which weapons will be sent to the player.
+# weaponorder = 
+
+# Enables or disables the checking of account rights for NC usage.
+# npcrights = true
+
+# Percentage of data packets over an internal limit a player is allowed to send before being suspected of hacking.
+# speedhacktolerance = 90
+
+# Reports to RC if a level is saved.
+# savelevelsmessage = true
+
+# Lets the NPC-Server log to logs/scriptfunctionslog.txt.
+# scriptlogfunctions = write player.nick,write player.guild,call sendtonc,call sendtorc
+
+# Logs script errors to logs/scripterrors.txt instead of the RC chat.
+# logscripterrorstofile = false
+
+# List of player attributes to send to all players and not just nearby players.
+# The attribute numbers are the ones from #P / player.attr[].  Like 1, 2, 3, etc.
+# sendtoallattr = 
+
+# Use optimized storage for putnpc2 npcs, activated by setting this.savelocally = true in the NPC script.
+# newnpcstorage = true
+
+# If true, sends the results of the echo() command to all RC users and not just ones with NC rights.
+# sendechotorc = false
+
+# List of SQLite database files allowed to be used with the requestsql2() function.
+# database = 
+
+# Controls if server-side gralats are logged.
+# disablegralatlog = false
+
+# If true, hideplayer() only works while a player is under a bush.
+# nohidewithoutbush = false
+
+# Lets an RC without a staff guild tag send mass PMs to players who ignore mass PMs.
+# rcofftagoverridesignore = false
+
+# Arrow types can be `all` or a comma separated list of arrow powers (1,2,3,4).
+# If the filter is enabled, attempts to spawn a restricted arrow will be logged to logs/arrowfilter.txt.
+# arrowallowedtypes = all
+# arrowfilterlog = true
+
+# Enables or disables putbomb.
+# Bomb types can be `all` or a comma separated list of bomb powers (1,2,3).
+# If the filter is enabled, attempts to spawn a restricted bomb will be logged to logs/bombfilter.txt.
+# putbombenabled = true
+# bomballowedtypes = all
+# bombfilterlog = true
+
+# Controls which showimg types are allowed.
+# The type can be `all` or ani,img,text.
+# The gani/images are a comma separated list (e.g., `idle,walk,sit` or `block.png,block2.png`)
+# If the filter is enabled, attempts to show a restricted showimg will be logged to logs/showimgsfilter.txt.
+# showimgstypes = all
+# showimgsallowedganis = all
+# showimgsallowedimages = all
+# showimgsfilterlog = true
+
+# Controls which player attr[] values are allowed.
+# The type can be `all` or a comma separated list of strings.
+# If the filter is enabled, attempts to set a restricted value will be logged to logs/attrfilter.txt.
+# attrallowedganis = all
+# attrallowedimages = all
+# attrallowedmisc = all
+# attrfilterlog = true
+
+# Controls if ganis can only be used in player attr[] values (and not set on the player themselves).
+# If the filter is set, attempts to use a restricted gani will be logged to logs/ganifilter.txt.
+# ganionlyattr = 
+# ganifilterlog = true
+
+# Distance of players to which projectiles are sent.
+# syncdistanceprojectiles = 256
+
+# Dynamically adjusts sync distance by player count.
+# start-range,end-range,syncdistance, ... repeated
+# e.g., syncfactors=0,0,100,75,125,80,175,225,60
+# syncfactors = 0,0,192
+
+# Controls if inactive players (hasn`t moved in 10 seconds) are counted for the `syncfactors` command.
+# syncfactorinactive = true
+
+# Enables horse fire and the spyfire command.
+# horsefireenabled = true
+
+# Disables the saving of player attributes.
+# dontsaveattributes = false
+
+# Verifies the arrow/bomb count on server-side.
+# arrowcountserverside = true/false
+# bombcountserverside = true/false
+
+# Commands typed in IRC tabs are forwarded to script event onIRCCommand
+# forwardirccommands=true/false
+
+# projectilemaxdistance = number - disallows projectiles if the player is not close to the projectile being sent
+# projectilemaxspeed = maximum speed of projectiles
+# projectileallowedanis = all or list of ganis which can be used for projectiles
+# projectilemaxpersecond = number - maximum number of projectiles per second per player
+# projectileaccountparam = number - which parameter is containing the account name, can be verified using this
+# projectilefilterlog = true/false - logs to logs/projectilefilter.txt if the player has sent a disallowed projectile
+# projectilelogdistance = true/false - says if projectiles which exceed the maxdistance should be logged
+# explosionallowedtypes = all or list of allowed explosionpowers, e.g. 1,2
+# explosionmaxpersecond = number - maximum number of explosions per second per player
+# explosionmaxdistance = number - disallows explosions if the player is not close to the epxlosion
+# explosionmaxradius = number - maximum radius of explosions
+# explosiondisallowedlevels = list of levels where explosions are not allowed
+# explosiondisallowedinsparringzone = true/false - says if explosions are disallowed in sparring levels
+# explosionlogdistance = true/false - says if explosions which exceed the maxdistance should be logged
+# explosionfilterlog = true/false - logs to logs/explosionfilter.txt if the player has sent a disallowed explosion
+
+# Allows player nicknames to be set clientside.
+# enableclientsidenick = true
+
+# Controls if the player`s level is saved to their account.
+# saveplayerlevel = true
+
+# Disables global playerlist, reduces lag on servers with thousands of players.
+# noserverlistercpp = true/false
+
+# Disables player item dropping.
+# disableitemdropping = true/false
+
+# Enables extended v6 body colors (disable v5 clients if using this).
+# enableexbodycolors = true/false
+
+# List of levels where you don't see other players.
+# singleplayerlevels = 
+
+# When the player drops an item, `player.onItemDrop(x,y,itemname)` will be called and the item will not drop.
+# itemdropevents2 = true/false
+
+# Enables serverside onwall detection for shoot projectiles.
+# projectilesstoponwall = true/false
+
+# Logs attempts of modifying read-only variables to logs/scripterrors.txt
+# scriptlogwritetoreadonly = true/false
+
+# Forces saving all npcs on level exit, can be disabled for optimization.
+# savenpcsonlevelcache = true/false
+
+# Limits how many gralats can be stacked on the ground.
+# maxgralatvalue = 0 or number

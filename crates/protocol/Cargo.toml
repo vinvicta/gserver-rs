@@ -1,0 +1,15 @@
+[package]
+name = "gserver-protocol"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+gserver-core.workspace = true
+bytes.workspace = true
+thiserror.workspace = true
+flate2.workspace = true
+bzip2.workspace = true
+serde.workspace = true
+base64 = "0.22"
+parking_lot = "0.12"
+tracing = "0.1"

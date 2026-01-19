@@ -1,0 +1,38 @@
+[package]
+name = "gserver-network"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+# Core types
+gserver-core.workspace = true
+gserver-protocol.workspace = true
+gserver-accounts.workspace = true
+gserver-config.workspace = true
+gserver-levels.workspace = true
+
+# Async runtime
+tokio.workspace = true
+tokio-util.workspace = true
+
+# Networking
+socket2.workspace = true
+
+# Compression
+flate2.workspace = true
+bzip2.workspace = true
+
+# Utilities
+bytes.workspace = true
+thiserror.workspace = true
+anyhow.workspace = true
+
+# Logging
+tracing.workspace = true
+
+# Concurrency
+dashmap.workspace = true
+parking_lot.workspace = true
+
+# Random number generation
+rand.workspace = true

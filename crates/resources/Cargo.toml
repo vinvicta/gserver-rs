@@ -1,0 +1,7 @@
+[package]
+name = "gserver-resources"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+gserver-core.workspace = true

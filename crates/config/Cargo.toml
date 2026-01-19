@@ -1,0 +1,11 @@
+[package]
+name = "gserver-config"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+gserver-core.workspace = true
+tracing.workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true

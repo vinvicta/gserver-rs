@@ -1,0 +1,81 @@
+[workspace]
+members = [
+    "crates/core",
+    "crates/protocol",
+    "crates/levels",
+    "crates/network",
+    "crates/accounts",
+    "crates/scripting",
+    "crates/game",
+    "crates/config",
+    "crates/resources",
+    "crates/storage",
+    "crates/server",
+]
+
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["GServer Rust Contributors"]
+license = "GPL-3.0"
+
+[workspace.dependencies]
+# Async runtime
+tokio = { version = "1.40", features = ["full", "tracing", "net", "io-util"] }
+tokio-util = { version = "0.7", features = ["codec"] }
+async-trait = "0.1"
+
+# Networking
+socket2 = "0.5"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+# Compression
+flate2 = "1.0"
+bzip2 = "0.4"
+
+# Encryption
+aes-gcm = "0.10"
+sha2 = "0.10"
+rand = "0.8"
+
+# Parsing
+nom = "7.1"
+
+# Error handling
+thiserror = "1.0"
+anyhow = "1.0"
+color-eyre = "0.6"
+
+# Logging
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+
+# Concurrency
+dashmap = "6.0"
+parking_lot = "0.12"
+
+# Utilities
+bytes = "1.0"
+futures = "0.3"
+
+# File watching
+notify = "6.1"
+
+# Testing
+criterion = "0.5"
+tempfile = "3.10"
+
+# Core crate (internal)
+gserver-core = { path = "crates/core" }
+gserver-protocol = { path = "crates/protocol" }
+gserver-levels = { path = "crates/levels" }
+gserver-accounts = { path = "crates/accounts" }
+gserver-scripting = { path = "crates/scripting" }
+gserver-network = { path = "crates/network" }
+gserver-game = { path = "crates/game" }
+gserver-config = { path = "crates/config" }

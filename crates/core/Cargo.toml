@@ -1,0 +1,10 @@
+[package]
+name = "gserver-core"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+thiserror.workspace = true
+anyhow.workspace = true
+serde.workspace = true
+parking_lot.workspace = true

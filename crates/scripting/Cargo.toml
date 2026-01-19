@@ -1,0 +1,24 @@
+[package]
+name = "gserver-scripting"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+gserver-core.workspace = true
+gserver-protocol.workspace = true
+gserver-levels.workspace = true
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+tokio = { workspace = true }
+parking_lot = { workspace = true }
+bytes = { workspace = true }
+dashmap = { workspace = true }
+thiserror = { workspace = true }
+
+# ANTLR4 for GS1 parsing - disabled for now, will implement manual parser
+# antlr-rust = "0.5"
+
+[dev-dependencies]
+tempfile.workspace = true
+criterion.workspace = true
