@@ -213,27 +213,7 @@ TEAMDAMAGE=false
 SINGLEPLAYER=false
 ```
 
-### 3. Folder Rights (Optional)
-
-Edit `servers/default/config/foldersconfig.txt` to control file access:
-
-```text
-// Format: permissions pattern
-// Permissions: rw (read+write), r (read only), - (no access)
-
-// Admin - full access
-rw *
-
-// Trusted users - can manage accounts and weapons
-rw accounts/*
-rw weapons/*
-rw worlds/*
-r config/*
-
-// Regular users - read-only config access
-r config/*
-r documents/*
-```
+> For complete configuration details, see the [GServer-v2 codebase](https://github.com/xtjoeytx/GServer-v2). The `foldersconfig.txt` file defines folder structure mappings - refer to the C++ implementation for the correct format and usage.
 
 ## Running the Server
 

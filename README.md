@@ -168,26 +168,7 @@ The server will start on port 14902 (default). Connect with your Graal client us
 | `NPCSERVER` | NPC server address | `127.0.0.1:14903` |
 | `ENABLEGMAP` | Enable gmap support | `false` |
 
-### Folder Rights (foldersconfig.txt)
-
-Configure which folders different user levels can access:
-
-```text
-// Format: permission_level folder_pattern
-// Permissions: r (read), w (write), - (none)
-
-// Admin can access everything
-rw *
-
-// Trusted users can read/write accounts
-rw accounts/*
-rw weapons/*
-rw worlds/*
-
-// Regular users can read some folders
-r config/*
-r documents/*
-```
+> See the [GServer-v2 codebase](https://github.com/xtjoeytx/GServer-v2) for complete server options documentation. The `foldersconfig.txt` file defines folder structure mappings (e.g., which folders contain weapons, levels, etc.) - see the C++ implementation for details.
 
 ## Directory Structure
 
